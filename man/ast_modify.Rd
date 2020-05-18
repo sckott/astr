@@ -43,6 +43,7 @@ out <- ast_modify(x = df, from = "+", to = "-")
 out
 class(out)
 attributes(out)
+data.frame(out)
 
 # more examples
 bar <- function(x) x / 6

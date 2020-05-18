@@ -26,6 +26,7 @@
 #' out
 #' class(out)
 #' attributes(out)
+#' data.frame(out)
 #' 
 #' # more examples
 #' bar <- function(x) x / 6
@@ -68,5 +69,9 @@ ast_modify <- function(x, from, to, if_many = "random") {
       all = mtch)
   }
   x[mtch, "text"] <- to
+  x$mutated <- FALSE
+  x$mutated[mtch] <- TRUE
+  x$mutated_from_to <- NA_character_
+  x$mutated_from_to[mtch] <- paste(from, to, sep = ",")
   return(x)
 }
