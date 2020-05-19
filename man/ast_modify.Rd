@@ -4,7 +4,7 @@
 \alias{ast_modify}
 \title{Modify an R function}
 \usage{
-ast_modify(x, from, to, if_many = "random")
+ast_modify(x, from, to, if_many = "random", no_match = stop)
 }
 \arguments{
 \item{x}{an object of class \code{ast}}
@@ -37,6 +37,8 @@ foo(5)
 # decompose the function
 df <- ast_decompose(foo)
 df
+data.frame(df)
+attr(df, "expr")
 
 # modify an aspect of the function
 out <- ast_modify(x = df, from = "+", to = "-")
@@ -44,6 +46,7 @@ out
 class(out)
 attributes(out)
 data.frame(out)
+attr(out, "expr")
 
 # more examples
 bar <- function(x) x / 6

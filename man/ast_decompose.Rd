@@ -24,4 +24,8 @@ foo <- function(x) {
 foo(5)
 df <- ast_decompose(foo)
 df
+data.frame(df)
+attributes(df)
+attr(df, "expr")
+attr(df, "expr")[1,"text"] # the original fxn
 }

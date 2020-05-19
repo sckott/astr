@@ -53,6 +53,10 @@ test_that("ast_modify fails well", {
   expect_error(ast_modify(structure('x', class="ast"), "x", "x", 5))
   # if_many not in allowed set
   expect_error(ast_modify(structure('x', class="ast"), "x", "x", "x"))
+  # no_match not of specified class
+  expect_error(ast_modify(structure('x', class="ast"), "x", "x", no_match = 5))
+  # no_match not in allowed set
+  expect_error(ast_modify(structure('x', class="ast"), "x", "x", no_match = print))
 
   # no match found
   expect_error(ast_modify(b, "-", "-"))

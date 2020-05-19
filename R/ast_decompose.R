@@ -13,10 +13,15 @@
 #' foo(5)
 #' df <- ast_decompose(foo)
 #' df
+#' data.frame(df)
+#' attributes(df)
+#' attr(df, "expr")
+#' attr(df, "expr")[1,"text"] # the original fxn
 ast_decompose <- function(x) {
   name <- deparse(substitute(x))
   pp <- parse(text = deparse(x), keep.source = TRUE)
   d <- utils::getParseData(pp, includeText = TRUE)
+  expr <- d[d$token %in% "expr", ]
   dd <- d[!d$token %in% c("expr", "forcond"), ]
-  structure(dd, class = c("ast", "data.frame"), name = name)
+  structure(dd, class = c("ast", "data.frame"), name = name, expr = expr)
 }

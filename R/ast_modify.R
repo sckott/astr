@@ -20,6 +20,8 @@
 #' # decompose the function
 #' df <- ast_decompose(foo)
 #' df
+#' data.frame(df)
+#' attr(df, "expr")
 #' 
 #' # modify an aspect of the function
 #' out <- ast_modify(x = df, from = "+", to = "-")
@@ -27,6 +29,7 @@
 #' class(out)
 #' attributes(out)
 #' data.frame(out)
+#' attr(out, "expr")
 #' 
 #' # more examples
 #' bar <- function(x) x / 6
@@ -55,15 +58,21 @@
 #' ast_modify(x, "+", "-", if_many = "random")
 #' ast_modify(x, "+", "-", if_many = "first")
 #' ast_modify(x, "+", "-", if_many = "all")
-ast_modify <- function(x, from, to, if_many = "random") {
+ast_modify <- function(x, from, to, if_many="random", no_match=stop) {
   assert(x, "ast")
   assert(from, "character")
   assert(to, "character")
   assert(if_many, "character")
+  assert(no_match, "function")
   stopifnot("if_many must be one of random,first,all" =
     if_many %in% c("random", "first", "all"))
+  stopifnot("no_match must be one of stop,warning,message" =
+    deparse(substitute(no_match)) %in% c("stop", "warning", "message"))
   mtch <- grep(from, x$text, fixed = TRUE)
-  if (length(mtch) == 0) stop("no match found, reconsider 'from'", call.=FALSE)
+  if (length(mtch) == 0) {
+    no_match("no match found, reconsider 'from'", call.=FALSE)
+    return(NULL)
+  }
   if (length(mtch) > 1) {
     mtch <- switch(if_many, random = sample(mtch, 1), first = mtch[1],
       all = mtch)

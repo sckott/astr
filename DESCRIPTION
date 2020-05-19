@@ -2,7 +2,7 @@ Package: astr
 Type: Package
 Title: Decompose and Recompose Functions
 Description: Decompose and Recompose Functions.
-Version: 0.0.1.93
+Version: 0.0.1.94
 Authors@R: c(person("Scott", "Chamberlain", role = c("aut", "cre"),
     email = "sckott@protonmail.com"))
 License: MIT + file LICENSE
