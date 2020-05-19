@@ -8,6 +8,8 @@
 #' @param if_many (character) if multiple matches to the `from` parameter
 #' input, should we randomly select one to replace, replace the first instance,
 #' or replace all? one of: first, all, random
+#' @param no_match (function) how to deal with no matches. by default we 
+#' [stop()], but you can set to [warning()] or [message()] 
 #' @return same as the input, an object of class `ast`, but modified
 #' @details we check that the `from` input has a match in the function
 #' data, if not, we fail out

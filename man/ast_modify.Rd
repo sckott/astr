@@ -17,6 +17,9 @@ for an exact match}
 \item{if_many}{(character) if multiple matches to the \code{from} parameter
 input, should we randomly select one to replace, replace the first instance,
 or replace all? one of: first, all, random}
+
+\item{no_match}{(function) how to deal with no matches. by default we
+\code{\link[=stop]{stop()}}, but you can set to \code{\link[=warning]{warning()}} or \code{\link[=message]{message()}}}
 }
 \value{
 same as the input, an object of class \code{ast}, but modified
