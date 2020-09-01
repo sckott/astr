@@ -3,7 +3,7 @@ astr
 
 
 
-[![Build Status](https://travis-ci.com/sckott/astr.svg?branch=mastr)](https://travis-ci.com/sckott/astr)
+[![R-check](https://github.com/sckott/astr/workflows/R-check/badge.svg)](https://github.com/sckott/astr/actions/)
 [![codecov.io](https://codecov.io/github/sckott/astr/coverage.svg?branch=mastr)](https://codecov.io/github/sckott/astr?branch=mastr)
 
 Decompose and Recompose Functions
