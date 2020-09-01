@@ -3,8 +3,8 @@ astr
 
 
 
-[![Build Status](https://travis-ci.com/ropenscilabs/astr.svg?branch=mastr)](https://travis-ci.com/ropenscilabs/astr)
-[![codecov.io](https://codecov.io/github/ropenscilabs/astr/coverage.svg?branch=mastr)](https://codecov.io/github/ropenscilabs/astr?branch=mastr)
+[![Build Status](https://travis-ci.com/sckott/astr.svg?branch=mastr)](https://travis-ci.com/sckott/astr)
+[![codecov.io](https://codecov.io/github/sckott/astr/coverage.svg?branch=mastr)](https://codecov.io/github/sckott/astr?branch=mastr)
 
 Decompose and Recompose Functions
 
@@ -12,7 +12,7 @@ Decompose and Recompose Functions
 
 
 ```r
-remotes::install_github("ropenscilabs/astr")
+remotes::install_github("sckott/astr")
 ```
 
 
@@ -76,9 +76,9 @@ eval(ex)(5)
 
 ## Meta
 
-* Please [report any issues or bugs](https://github.com/ropenscilabs/astr/issues).
+* Please [report any issues or bugs](https://github.com/sckott/astr/issues).
 * License: MIT
 * Get citation information for `astr` in R doing `citation(package = 'astr')`
 * Please note that this project is released with a [Contributor Code of Conduct][coc]. By participating in this project you agree to abide by its terms.
 
-[coc]: https://github.com/ropenscilabs/astr/blob/mastr/CODE_OF_CONDUCT.md
+[coc]: https://github.com/sckott/astr/blob/mastr/CODE_OF_CONDUCT.md

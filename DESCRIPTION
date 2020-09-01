@@ -2,17 +2,18 @@ Package: astr
 Type: Package
 Title: Decompose and Recompose Functions
 Description: Decompose and Recompose Functions.
-Version: 0.0.1.94
+Version: 0.0.1.98
 Authors@R: c(person("Scott", "Chamberlain", role = c("aut", "cre"),
     email = "sckott@protonmail.com"))
 License: MIT + file LICENSE
-URL: https://github.com/ropenscilabs/astr, https://docs.ropensci.org/astr
-BugReports: https://github.com/ropenscilabs/astr/issues
+URL: https://github.com/sckott/astr, https://sckott.github.io/astr/
+BugReports: https://github.com/sckott/astr/issues
 Roxygen: list(markdown = TRUE)
 Encoding: UTF-8
 Imports:
     utils,
-    crayon
+    crayon,
+    rlang
 Suggests: 
     testthat
 RoxygenNote: 7.1.0
