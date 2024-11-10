@@ -2,13 +2,23 @@
 % Please edit documentation in R/astr-package.R
 \docType{package}
 \name{astr-package}
-\alias{astr-package}
 \alias{astr}
-\title{astr}
+\alias{astr-package}
+\title{astr: Decompose and Recompose Functions}
 \description{
-Decompose and Recompose Functions
+Decompose and Recompose Functions.
+}
+\seealso{
+Useful links:
+\itemize{
+  \item \url{https://github.com/sckott/astr}
+  \item \url{https://sckott.github.io/astr/}
+  \item Report bugs at \url{https://github.com/sckott/astr/issues}
+}
+
 }
 \author{
-Scott Chamberlain \email{sckott@protonmail.com}
+\strong{Maintainer}: Scott Chamberlain \email{sckott@protonmail.com}
+
 }
-\keyword{package}
+\keyword{internal}
