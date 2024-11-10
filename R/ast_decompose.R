@@ -2,6 +2,7 @@
 #' 
 #' @export
 #' @importFrom utils getParseData
+#' @importFrom rlang as_name call_args
 #' @param x a function
 #' @return result of [utils::getParseData()], a data.frame; but 
 #' we wrap it in a thin S3 wrapper to make it easy to see how the
@@ -18,7 +19,7 @@
 #' attr(df, "expr")
 #' attr(df, "expr")[1,"text"] # the original fxn
 ast_decompose <- function(x) {
-  name <- deparse(substitute(x))
+  name <- as_name(call_args(sys.calls()[[1]])[[1]])
   pp <- parse(text = deparse(x), keep.source = TRUE)
   d <- utils::getParseData(pp, includeText = TRUE)
   expr <- d[d$token %in% "expr", ]
