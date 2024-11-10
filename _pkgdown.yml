@@ -1,3 +1,4 @@
 url: https://sckott.github.io/astr/
 template:
   bootstrap: 5
+  light-switch: true
