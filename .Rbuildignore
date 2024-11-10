@@ -10,3 +10,6 @@ man-roxygen
 ^Makefile$
 scotts_rules.R
 rules_egs.R
+^_pkgdown\.yml$
+^docs$
+^pkgdown$
