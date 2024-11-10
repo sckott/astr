@@ -13,3 +13,4 @@ rules_egs.R
 ^_pkgdown\.yml$
 ^docs$
 ^pkgdown$
+^\.github$
